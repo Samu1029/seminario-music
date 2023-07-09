@@ -3,6 +3,11 @@
 
 /** Ionic CSS Variables **/
 :root {
+  /** Actividad Variables **/
+  --fuente-titulos: font-family: "Lucida Console", "Courier New", monospace;
+  --tam-fuente-titulos: font-size: 30px;
+  --color-parrafos: #161515;
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
