@@ -5,22 +5,23 @@
 
   .texto {
     text-align: justify;
-    color: --color-parrafos; // 1. color, variable personalizada 
+    color: var(--color-parrafos); // 1. color, variable personalizada 
+    font-size: medium;
     margin: 10px;
   }
   
   .font-cursive {
-    font-family: --fuente-titulos; // 2. Fuente de los titulos, variable personalizada 
-    color: --ion-color-success; //1- Variable predeterminada de ionic
+    font-family: var(--fuente-titulos); // 2. Fuente de los titulos, variable personalizada 
+    color: var(--ion-color-success-shade); //--ion-color-success;
     text-shadow: 3px 3px 3px #ababab;
-    font-size: --tam-fuente-titulos; // 3. Tamaño de fuente de los titulos, variable personalizada 
+    font-size: var(--tam-fuente); // 3. Tamaño de fuente de los titulos, variable personalizada 
     text-align: center;
   }
 
 
   .close_icon {
     font-size: 25px;
-    color: --ion-color-warning-contrast; // 2- variable predeterminada de ionic 
+    color: var(--ion-color-warning-contrast); // 2- variable predeterminada de ionic 
     z-index: 50;
     float: right;   
   }
@@ -31,6 +32,6 @@
     --color: white;
   }
 
-  ion-content{
+ ion-content{
     --background: #deeee6;
   }
