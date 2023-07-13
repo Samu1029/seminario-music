@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-title> Music App </ion-title>
     <ion-icon name="close" class="close_icon" (click)="finish()"></ion-icon>
@@ -16,7 +16,7 @@
       <h1 class="font-cursive">{{slide.title}}</h1>
       <img src="{{slide.img}}"/>
       <ion-icon name="{{slide.icon}}"></ion-icon>
-      <p class="texto">{{slide.description}}</p>
+      <p class="texto ion-text-justify">{{slide.description}}</p> <!--Se agrega Utilidad ion text justify-->
     </swiper-slide>
   </swiper-container>
 </ion-content>
