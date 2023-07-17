@@ -13,6 +13,25 @@ export class RegisterPage implements OnInit {
   
   registerForm: FormGroup;
 
+  validation_messages = {
+    email: [
+      { type: "required", message: "El email es obligatorio" },
+      { type: "pattern", message: "Digite un email válido" },
+      { type: "email", message: "Ej. name@example.com" }
+    ],
+    password: [
+      { type: "required", message: "La Contraseña es obligatoria" },
+      { type: "minLength", message: "El mínimo de caracteres es 8... Verifique!!" },
+      { type: "maxLength", message: "El máximo de caracteres es 16... Verifique!!" }
+    ],
+    name: [
+      { type: "required", message: "El Nombre es obligatorio" }
+    ],
+    last_name: [
+      { type: "required", message: "Los Apellidos son obligatorio" }
+    ],
+  }
+
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthenticateService,
@@ -63,6 +82,7 @@ export class RegisterPage implements OnInit {
   
   goToLogin(){
     console.log("Volver atras");
+    this.navCtrl.navigateBack('/login');
   }
 
   registerUser(userData: any) {

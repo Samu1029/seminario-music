@@ -1,0 +1,37 @@
+ion-content.background{
+    --background: var(--img-fondo);
+    --padding-top: 40px;
+}
+
+.atras {
+    float: left;
+    margin: 0;
+}
+
+ion-item {
+    --highlight-height: 2px;
+    --highlight-color-focused: #43e7f3;
+    --highlight-color-valid: #6f58d8;
+    --highlight-color-invalid: #ec1224;
+    width: 80%;
+    margin: auto;
+  }
+
+ion-img {
+    margin: auto;
+    padding-top: 50px;
+    height: 300px;
+    width: 300px; 
+}
+
+ion-button {
+    width: 80%;
+    margin: auto;
+}
+
+.validation-erros {
+    width: 80%;
+    margin: auto;
+    color: red
+
+}

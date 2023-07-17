@@ -21,8 +21,8 @@ export class LoginPage implements OnInit {
     ],
     password: [
       { type: "required", message: "La Contraseña es obligatoria" },
-      { type: "min", message: "El mínimo de caracteres es 8... Verifique!!" },
-      { type: "max", message: "El máximo de caracteres es 16... Verifique!!" }
+      { type: "minLength", message: "El mínimo de caracteres es 8... Verifique!!" },
+      { type: "maxLength", message: "El máximo de caracteres es 16... Verifique!!" }
     ]
   }
 
@@ -51,8 +51,8 @@ export class LoginPage implements OnInit {
           Validators.compose(
             [
               Validators.required,
-              Validators.min(8),
-              Validators.max(15)//Se agrega validators
+              Validators.minLength(6),
+              Validators.maxLength(25)//Se agrega validators
             ]
           )
         )
