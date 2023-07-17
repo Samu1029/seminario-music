@@ -1,4 +1,4 @@
-<ion-header class="ion-no-border">
+<ion-header>
   <ion-toolbar>
     <ion-title> Music App </ion-title>
     <ion-icon name="close" class="close_icon" (click)="finish()"></ion-icon>
@@ -6,17 +6,18 @@
 </ion-header>
 
 <ion-content>
-  <swiper-container 
+  <!--Se agrega Utilidad-->
+  <swiper-container class="ion-margin"
   [initialSlide]="1"
   [slidesPerView]="1"s
   [speed]="400"
   >
 
     <swiper-slide *ngFor="let slide of slides">
-      <h1 class="font-cursive">{{slide.title}}</h1>
+      <h1 class="ion-text-uppercase">{{slide.title}}</h1><!--Se agrega Utilidad-->
       <img src="{{slide.img}}"/>
       <ion-icon name="{{slide.icon}}"></ion-icon>
-      <p class="texto ion-text-justify">{{slide.description}}</p> <!--Se agrega Utilidad ion text justify-->
+      <p class="ion-text-justify">{{slide.description}}</p> <!--Se agrega Utilidad-->
     </swiper-slide>
   </swiper-container>
 </ion-content>

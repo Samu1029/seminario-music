@@ -15,8 +15,14 @@ export class LoginPage implements OnInit {
   
   validation_messages = {
     email: [
-      { type: "required", message: "El email es obligatio" },
-      { type: "pattern", message: "Debe poner un email valido" }
+      { type: "required", message: "El email es obligatorio" },
+      { type: "pattern", message: "Digite un email válido" },
+      { type: "email", message: "Ej. name@example.com" }
+    ],
+    password: [
+      { type: "required", message: "La Contraseña es obligatoria" },
+      { type: "min", message: "El mínimo de caracteres es 8... Verifique!!" },
+      { type: "max", message: "El máximo de caracteres es 16... Verifique!!" }
     ]
   }
 
@@ -35,7 +41,8 @@ export class LoginPage implements OnInit {
           Validators.compose(
             [
               Validators.required,
-              Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9_.+-]+.[a-zA-Z0-9.-]+$")
+              Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9_.+-]+.[a-zA-Z0-9.-]+$"),
+              Validators.email //Se agrega validators
             ]
           )
         ),
@@ -44,7 +51,8 @@ export class LoginPage implements OnInit {
           Validators.compose(
             [
               Validators.required,
-              Validators.minLength(6)
+              Validators.min(8),
+              Validators.max(15)//Se agrega validators
             ]
           )
         )

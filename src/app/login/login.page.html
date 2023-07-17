@@ -1,17 +1,22 @@
-<ion-header>
+<!--<ion-header>
   <ion-toolbar>
     <ion-title>Login</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header>-->
 
-<ion-content>
+<ion-content class="background">
+  <ion-header>
+    <ion-img
+      src="assets/img/music.png"
+      alt="music"
+    ></ion-img>
+  </ion-header>
   <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
 
-  <ion-item>
-    <ion-input label="Email" labelPlacement="floating" placeholder="name@example.com" formControlName="email"></ion-input>
+  <ion-item lines="full" class="item-has-focus ion-touched">
+    <ion-input label="Email" label-Placement="floating" placeholder="name@example.com" placeholder-opacity formControlName="email"></ion-input>
   </ion-item>
-
-  <div class="validation-erros">
+  <div class="validation-erros ion-text-center"><!--Se coloca utilidad css-->
     <ng-container *ngFor="let validation of validation_messages.email">
       <div *ngIf="(
         loginForm.get('email')?.hasError(validation.type) && 
@@ -22,11 +27,23 @@
       
     </ng-container>
   </div>
-
-  <ion-item>  
-    <ion-input label="Password" labelPlacement="floating" placeholder="********" formControlName="password"></ion-input>
+  <br/>
+  <br/>
+  <ion-item lines="full" class="item-has-focus ion-touched">  
+    <ion-input type="password" label="Password" labelPlacement="floating" placeholder="********" formControlName="password"></ion-input>
   </ion-item>
-  
+  <div class="validation-erros ion-text-center">
+    <ng-container *ngFor="let validation of validation_messages.password">
+      <div *ngIf="(
+        loginForm.get('password')?.hasError(validation.type) && 
+        loginForm.get('password')?.dirty) 
+      ">
+        {{validation.message}}
+      </div>
+    </ng-container>
+  </div>
+  <br/>
+  <br/>
   <ion-button
     expand="full"
     shape="round"
@@ -37,6 +54,7 @@
     Iniciar Sesión
   </ion-button>
   </form>
+  <br/>
   <ion-footer>
     <ion-button
     expand="full"

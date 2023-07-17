@@ -1,0 +1,38 @@
+/*ion-content{
+    --background: url("/src/assets/img/fondo.png");
+}*/
+
+ion-content.background{
+    --background: linear-gradient(rgba(222, 222, 228, 0.8), rgba(209, 221, 210, 0.8)), url(/assets/img/music2.jpg) 0 0/100% 100% no-repeat;
+}
+
+ion-item {
+    --highlight-height: 2px;
+    --highlight-color-focused: #43e7f3;
+    --highlight-color-valid: #6f58d8;
+    --highlight-color-invalid: #ec1224;
+    width: 80%;
+    margin: auto;
+  }
+
+ion-img {
+    margin: auto;
+    padding-top: 50px;
+    height: 300px;
+    width: 300px; 
+}
+
+ion-button {
+    width: 80%;
+    margin: auto;
+}
+
+.validation-erros {
+    width: 80%;
+    margin: auto;
+    color: red
+
+}
+
+
+
