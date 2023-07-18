@@ -8,11 +8,11 @@ export class MusicService {
 
   constructor() { }
 
-  getArtists(){
+  /*getArtists(){
     return fetch("https://musicback.fly.dev/artists").then(
       response => response.json()
     );
-  }
+  }*/
 
   getArtistsFromJson(){
     return listArtists;

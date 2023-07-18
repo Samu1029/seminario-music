@@ -14,10 +14,10 @@ export class HomePage {
   constructor(private musicService: MusicService) {}
 
   ionViewDidEnter(){
-    this.musicService.getArtists().then(listArtists => {
+    /*this.musicService.getArtists().then(listArtists => {
       this.artists = listArtists;
       console.log(this.artists);
-    })
+    })*/
 
     this.localArtists =  this.musicService.getArtistsFromJson();
     console.log(this.localArtists.artists);
