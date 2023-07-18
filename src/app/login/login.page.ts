@@ -22,7 +22,7 @@ export class LoginPage implements OnInit {
     password: [
       { type: "required", message: "La Contraseña es obligatoria" },
       { type: "minlength", message: "El mínimo de caracteres es 8... Verifique!!" },
-      { type: "maxength", message: "El máximo de caracteres es 16... Verifique!!" }
+      { type: "maxlength", message: "El máximo de caracteres es 16... Verifique!!" }
     ]
   }
 
