@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 })
 export class IntroGuard implements CanActivate {
 
-  constructor(private storage: Storage, private router: Router) {};
+  constructor(
+    private storage: Storage, 
+    private router: Router) {};
 
   async canActivate() {
     const isIntroShowed = await this.storage.get('introShow');
