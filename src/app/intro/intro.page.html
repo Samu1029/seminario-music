@@ -8,14 +8,14 @@
 <ion-content>
   <!--Se agrega Utilidad-->
   <swiper-container class="ion-margin"
-  [initialSlide]="1"
+  [initialSlide]="0"
   [slidesPerView]="1"
   [speed]="400"
   >
 
     <swiper-slide *ngFor="let slide of slides">
       <h1 class="ion-text-uppercase">{{slide.title}}</h1><!--Se agrega Utilidad-->
-      <img src="{{slide.img}}"/>
+      <img src={{slide.img}}/>
       <ion-icon name="{{slide.icon}}"></ion-icon>
       <p class="ion-text-justify">{{slide.description}}</p> <!--Se agrega Utilidad-->
     </swiper-slide>

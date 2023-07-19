@@ -23,11 +23,12 @@ export class HomePage {
   ionViewDidEnter(){
     this.musicService.getArtists().then(listArtists => {
       this.artists = listArtists;
-      console.log(this.artists);
+      //console.log(this.artists.length);
     })
 
     this.localArtists =  this.musicService.getArtistsFromJson();
-    console.log(this.localArtists.artists);
+    this.localArtists = this.localArtists.artists
+    //console.log(this.localArtists.artists);
   }
 
   async showSongs(artist:any){
