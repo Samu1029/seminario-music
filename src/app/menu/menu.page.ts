@@ -26,4 +26,8 @@ export class MenuPage implements OnInit {
     this.storage.set("isUserLoggedIn", false);
   }
 
+  intro() {
+    this.nvCtrl.navigateRoot("/intro");
+  }
+
 }

@@ -11,11 +11,14 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      
-    </ion-content>
-    <ion-footer>
-      <ion-item (click)="loguot()">
+      <ion-item (click)="intro()">
         <ion-icon name="log-in-outline"></ion-icon>
+        <p>Intro</p>
+      </ion-item>
+    </ion-content>
+    <ion-footer collapse="fade">
+      <ion-item (click)="loguot()">
+        <ion-icon name="log-in-outline" class="icon-cerr-session"></ion-icon>
         <p>Cerrar Sessión</p>
       </ion-item>
     </ion-footer>
