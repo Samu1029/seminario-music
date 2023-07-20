@@ -22,11 +22,12 @@ export class SongsModalPage implements OnInit {
   }
 
   close(){
-   return this.modalController.dismiss();
+   return this.modalController.dismiss(null);
   }
 
   async selectSong(song:any){
     await this.modalController.dismiss(song);
+    
   }
 
 }

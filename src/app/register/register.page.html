@@ -2,14 +2,20 @@
   <ion-toolbar>
     <ion-buttons class="atras">
       <ion-button (click)="goToLogin()">
-        Atras
+        <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Registro</ion-title>
+    <ion-title>Registrar Usuario</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="background">
+  <ion-header>
+    <ion-img
+      src="assets/img/music.png"
+      alt="music"
+    ></ion-img>
+  </ion-header>
   <form [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm.value)">
 
     <ion-item lines="full" class="item-has-focus ion-touched">
@@ -26,7 +32,7 @@
       </ng-container>
     </div>
     <br/>
-    <ion-item>
+    <ion-item lines="full" class="item-has-focus ion-touched">
       <ion-input label="Password" labelPlacement="floating" placeholder="*******" formControlName="password"></ion-input>
     </ion-item>
     <div class="validation-erros ion-text-center">
@@ -39,7 +45,8 @@
         </div>
       </ng-container>
     </div>
-    <ion-item>
+    <br/>
+    <ion-item lines="full" class="item-has-focus ion-touched">
       <ion-input label="Nombre" labelPlacement="floating" placeholder="Nombre" formControlName="name"></ion-input>
     </ion-item>
     <div class="validation-erros ion-text-center">
@@ -52,7 +59,8 @@
         </div>
       </ng-container>
     </div>
-    <ion-item>
+    <br/>
+    <ion-item lines="full" class="item-has-focus ion-touched">
       <ion-input label="Apellidos" labelPlacement="floating" placeholder="Apellido" formControlName="last_name"></ion-input>
     </ion-item>
     <div class="validation-erros ion-text-center">
@@ -65,6 +73,8 @@
         </div>
       </ng-container>
     </div>
+    <br/>
+    <br/>
     <ion-button
     expand="full"
     shape="round"
