@@ -8,10 +8,10 @@ export class AuthenticateService {
 
   constructor(private storage: Storage) { }
 
-  loginUser(credentials: any){
+  loginUser(credentials:any){
     return new Promise((accept, reject) => {
       if (
-        credentials.email == "angelsamudiolopez@gmail.com" &&
+        credentials.email == "angel@pca.com" && 
         credentials.password == "123456789"
       )
       {
@@ -22,7 +22,7 @@ export class AuthenticateService {
     })
   }
 
-  registerUser(userData: any){
+  registerUser(userData:any){
     userData.password = btoa(userData.password);
     return this.storage.set("user", userData);
   }
