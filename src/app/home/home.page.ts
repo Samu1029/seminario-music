@@ -19,6 +19,7 @@ export class HomePage {
   currentSong: any;
   newTime: any;
   albums: any;
+  img: any;
   constructor(
     private musicService: MusicService,
     private modalController: ModalController
@@ -31,7 +32,8 @@ export class HomePage {
     })
     //Obteniendo artistas locales
     this.localArtists = this.musicService.getArtistsFromJson();
-    this.localArtists = this.localArtists.artists
+    this.localArtists = this.localArtists.artists;
+    console.log(this.localArtists)
     //Obteniendo Albums
     this.musicService.getAlbums().then(listAlbums => {
       this.albums = listAlbums;
